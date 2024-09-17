@@ -1,0 +1,33 @@
+.navbar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 2; /* Asegura que el navbar esté por encima del contenido */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(143, 23, 139, 0.2);
+  border-radius: 5px;
+}

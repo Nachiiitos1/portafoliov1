@@ -1,0 +1,74 @@
+.container {
+  width: 70%; /* Los containers ocupan el 70% del ancho de la pantalla */
+  height: 70vh; /* Los containers ocupan el 70% de la altura de la vista */
+  margin: 10vh auto; /* Centrado vertical y horizontalmente */
+  padding: 40px;
+  padding-top: 40px; /* Ajusta el padding-top para acomodar el navbar */
+  background-color: #161425; /* Color gris oscuro */
+  border-radius: 15px;
+  box-shadow: 0px 0px 100px rgba(211, 15, 90, 0.5); /* Sombra igual en todos los lados */
+  display: flex;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center; 
+  position: relative; /* Necesario para posicionar el texto relativo al container */
+}
+
+.developer-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.tag {
+  color: #3498db; /* Color azul para </> */
+}
+
+.developer {
+  color: #ffffff; /* Color blanco para DEVELOPER */
+}
+
+.content {
+  max-width: 50%; /* Limita el ancho del texto */
+  margin-right: auto; /* Empuja el contenido a la izquierda */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+.image-container {
+  width: 30%; /* Ajusta el ancho de la imagen */
+  height: 0; /* Altura 0 para usar padding-bottom */
+  padding-bottom: 30%; /* Usa padding-bottom para mantener la proporción de la imagen circular */
+  background-image: url('./assets/yofoto.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+}
+
+@keyframes purpleShadow {
+  0% {
+    box-shadow: 0 0 0 rgba(138, 43, 226, 0);
+  }
+  50% {
+    box-shadow: 0 0 30px 20px rgba(138, 43, 226, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(138, 43, 226, 0);
+  }
+}
+
+.image-container {
+  width: 30%; /* Ajusta el ancho de la imagen */
+  height: 0; /* Altura 0 para usar padding-bottom */
+  padding-bottom: 30%; /* Usa padding-bottom para mantener la proporción de la imagen circular */
+  background-image: url('./assets/yofoto.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-left: auto; /* Empuja la imagen hacia la derecha */
+  
+  /* Añadimos la animación de la sombra */
+  animation: purpleShadow 3s ease-in-out infinite; /* Duración de 3 segundos, animación continua */
+}

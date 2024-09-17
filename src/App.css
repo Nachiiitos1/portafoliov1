@@ -1,0 +1,88 @@
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Añade esta clase a los containers que van a tener la animación de zoom */
+.zoom-container {
+  animation: zoomIn 0.6s ease;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body, html {
+  background: linear-gradient(264deg,#242f3e,#265aa1,#000000);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+  overflow: hidden; /* Hide scrollbars */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #242f3e; /* Fondo gris claro */
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+
+}
+
+/* Ajuste del offset para compensar el navbar */
+
+
+/* Asegura que los containers estén uno debajo del otro con margen suficiente */
+#proyectos, #sobremi, #socialmedia {
+  padding-top: 5px;
+  margin-top: 100vh; /* Desplaza estos containers hacia abajo fuera de la vista inicial */
+}
+#principal {
+  padding-top: 5px; /* Desplaza estos containers hacia abajo fuera de la vista inicial */
+}
+
+/* Estilo del navbar */
+.navbar {
+  /* Elimina o comenta estos estilos globales */
+  /* position: fixed;
+  top: 0;
+  right: 0; */
+  padding: 10px 20px;
+  border-radius: 0 0 0 10px;
+  z-index: 10; /* Asegura que el navbar esté siempre por encima de los containers */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(190, 52, 178, 0.2);
+  border-radius: 5px;
+}
